@@ -14,7 +14,7 @@ choco install vim -y
 choco install nano -y
 choco install visualstudio2019community -y
 choco install 7zip.install -y
-choco install wsl2 -y
+#choco install wsl2 -y
 choco install notepadplusplus -y
 choco install openssl -y
 choco install openssh --pre -y
