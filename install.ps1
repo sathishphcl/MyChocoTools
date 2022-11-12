@@ -1,7 +1,7 @@
 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
-DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+Install-WindowsFeature -Name Hyper-V -ComputerName $env:ComputerName -IncludeManagementTools -Restart
 
 choco install azure-cli -y
 choco install git -y
@@ -21,4 +21,4 @@ choco install openssh --pre -y
 choco install mobaxterm -y
 choco install rdcman -y
 choco install postman -y
-Restart-Computer
+
