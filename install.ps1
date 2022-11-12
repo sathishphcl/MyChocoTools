@@ -22,3 +22,11 @@ choco install mobaxterm -y
 choco install rdcman -y
 choco install postman -y
 
+#Installing Docker
+
+$DockerInstaller = Join-Path $Env:Temp InstallDocker.msi
+Invoke-WebRequest https://download.docker.com/win/stable/InstallDocker.msi -OutFile $DockerInstaller
+
+## Now install it 
+msiexec -i $DockerInstaller -quiet
+
